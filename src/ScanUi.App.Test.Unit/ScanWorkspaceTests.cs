@@ -14,7 +14,7 @@ public class ScanWorkspaceTests
         var rendered = context.Render<App>();
 
         Assert.Equal("Scan workspace", rendered.Find("h1").TextContent.Trim());
-        Assert.NotNull(rendered.Find("nav[aria-label='Main navigation']"));
+        Assert.Empty(rendered.FindAll("aside"));
         Assert.NotNull(rendered.Find("section[aria-label='Scanner workspace']"));
         Assert.NotNull(rendered.Find("section[aria-label='Export']"));
         Assert.Equal(

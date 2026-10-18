@@ -248,9 +248,6 @@
 }
 
 @media (max-width: 1260px) {
-    .sidebar {
-        width: 188px;
-    }
 
     .workspace {
         grid-template-columns: 160px minmax(320px, 1fr) 256px;
@@ -375,9 +372,6 @@
         overflow: visible;
     }
 
-    .sidebar {
-        width: 160px;
-    }
 
     .workspace {
         grid-template-columns: 140px minmax(0, 1fr);
