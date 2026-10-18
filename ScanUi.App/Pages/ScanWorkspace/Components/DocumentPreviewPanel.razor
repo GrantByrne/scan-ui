@@ -1,0 +1,29 @@
+<div class="panel preview">
+    <div class="preview-top">
+        <div class="preview-label">Document preview <small>Page 1 of 3</small></div>
+        <div class="tools">
+            <button class="tool" type="button" title="Auto enhance"><FolioIcon Name="@FolioIconName.Spark" /><span>Enhance</span></button>
+            <button class="tool" type="button" title="Auto crop"><FolioIcon Name="@FolioIconName.Crop" /><span>Crop</span></button>
+            <span class="toolbar-split"></span>
+            <button class="tool" type="button" title="Rotate 90 degrees" aria-label="Rotate 90 degrees"><FolioIcon Name="@FolioIconName.Rotate" /></button>
+            <button class="tool active" type="button" title="Toggle searchable text" aria-label="Toggle searchable text"><FolioIcon Name="@FolioIconName.Text" /></button>
+        </div>
+    </div>
+    <div class="stage">
+        <div class="paper-viewport">
+            <div class="paper">
+                <InvoiceDocument />
+            </div>
+        </div>
+        <span class="stage-watermark">Preview · A4 portrait</span>
+    </div>
+    <div class="preview-bottom">
+        <div class="preview-info"><FolioIcon Name="@FolioIconName.Check" /><span>Auto-straightened · 300 DPI</span></div>
+        <div class="zoomtools">
+            <button type="button" title="Zoom out" aria-label="Zoom out"><FolioIcon Name="@FolioIconName.Minus" CssClass="small-icon" /></button>
+            <span>100%</span>
+            <button type="button" title="Zoom in" aria-label="Zoom in"><FolioIcon Name="@FolioIconName.Plus" CssClass="small-icon" /></button>
+            <button type="button" title="Reset zoom" aria-label="Reset zoom"><FolioIcon Name="@FolioIconName.Max" CssClass="small-icon" /></button>
+        </div>
+    </div>
+</div>

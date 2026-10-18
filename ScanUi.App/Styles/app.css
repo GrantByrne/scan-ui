@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "./layout.css";
+@import "./workspace.css";
+@import "./document.css";
+@import "./settings.css";
+@source "../**/*.razor";
+@source "../../ScanUi.App.Components/**/*.razor";

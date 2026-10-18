@@ -1,0 +1,7 @@
+**/bin/
+**/obj/
+.vs/
+*.user
+**/node_modules/
+ScanUi.App/wwwroot/app.css
+*.suo

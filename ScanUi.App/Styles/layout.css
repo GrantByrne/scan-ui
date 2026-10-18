@@ -1,0 +1,380 @@
+:root {
+    --ink: #1c2941;
+    --blue: #4d62dd;
+    --line: #e6eaf0;
+    --background: #f5f7fb;
+    --sidebar: #172339;
+    --shadow: 0 7px 32px rgba(24, 37, 68, .035);
+}
+
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-width: 768px;
+    background: var(--background);
+    color: var(--ink);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 13px;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: .45;
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+    outline: 3px solid #bbc5ff;
+    outline-offset: 2px;
+}
+
+.icon-sprite {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex: none;
+    vertical-align: middle;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.small-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.sidebar {
+    padding: 27px 14px 22px;
+    background: var(--sidebar);
+    color: #f8faff;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 2px 12px 30px;
+}
+
+.brandmark {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    flex: none;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #8297ff, #5268e8);
+    box-shadow: 0 8px 18px rgba(40, 69, 205, .3);
+}
+
+.brandmark .icon {
+    width: 21px;
+    height: 21px;
+}
+
+.brandtitle {
+    font-size: 21px;
+    font-weight: 760;
+    letter-spacing: -.9px;
+}
+
+.brand-period {
+    color: #94a4ff;
+}
+
+.brandcaption {
+    margin-top: 1px;
+    color: #9ba8c0;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.navlabel {
+    margin: 0 0 12px;
+    padding-left: 14px;
+    color: #657793;
+    font-size: 10px;
+    font-weight: 780;
+    letter-spacing: 1.55px;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.navbtn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    border: 0;
+    border-radius: 10px;
+    padding: 12px 13px;
+    background: transparent;
+    color: #a5b1c6;
+    font-weight: 570;
+    text-align: left;
+}
+
+.navbtn:hover {
+    background: #24334e;
+    color: white;
+}
+
+.navbtn.active {
+    background: #30466e;
+    color: white;
+    box-shadow: inset 3px 0 0 #8ba3ff;
+}
+
+.navbtn .icon {
+    width: 18px;
+    height: 18px;
+}
+
+.tag {
+    margin-left: auto;
+    border-radius: 6px;
+    padding: 3px 7px;
+    background: #344b72;
+    color: #c5d2fb;
+    font-size: 10px;
+}
+
+.sidebar-spacer {
+    flex: 1;
+}
+
+.sidehint {
+    margin: 22px 5px 8px;
+    border: 1px solid #33445e;
+    border-radius: 13px;
+    padding: 17px 14px;
+    background: #1e2d46;
+    color: #e2e8f5;
+}
+
+.sidehint-kicker {
+    color: #94a6ca;
+    font-size: 11px;
+    font-weight: 680;
+}
+
+.sidehint-title {
+    margin: 7px 0;
+    font-size: 13px;
+    font-weight: 690;
+    line-height: 1.42;
+}
+
+.sidehint-copy {
+    color: #91a1bb;
+    font-size: 11px;
+    line-height: 1.48;
+}
+
+.side-divider {
+    height: 1px;
+    margin: 18px 10px;
+    background: #2a3a54;
+}
+
+.side-bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    color: #899bb6;
+    font-size: 11px;
+}
+
+.side-bottom-caption {
+    color: #687e9e;
+}
+
+.avatar {
+    display: grid;
+    width: 29px;
+    height: 29px;
+    flex: none;
+    place-items: center;
+    border-radius: 9px;
+    background: #344b6f;
+    color: #e1e9ff;
+    font-size: 11px;
+    font-weight: 760;
+}
+
+.topbar {
+    display: flex;
+    height: 71px;
+    flex: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #e5e9f0;
+    padding: 0 28px;
+    background: white;
+}
+
+.topbreadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9ba3b3;
+    font-size: 12px;
+}
+
+.topbreadcrumb strong {
+    color: #46526c;
+    font-weight: 690;
+}
+
+.topright {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.demo-pill {
+    border-radius: 7px;
+    padding: 7px 11px;
+    background: #f2f4f8;
+    color: #697694;
+    font-size: 10px;
+    font-weight: 790;
+    letter-spacing: .55px;
+    text-transform: uppercase;
+}
+
+.top-separator {
+    width: 1px;
+    height: 24px;
+    background: var(--line);
+}
+
+.device {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #46526d;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.device-note,
+.device-chevron {
+    color: #9da8b8;
+    font-weight: 500;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    flex: none;
+    border-radius: 50%;
+    background: #42bd92;
+    box-shadow: 0 0 0 3px #e6f9f2;
+}
+
+.ghost-icon {
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 8px;
+    padding: 8px;
+    background: transparent;
+    color: #7e8aa2;
+}
+
+.ghost-icon:hover {
+    background: #edf1fa;
+    color: #29374e;
+}
+
+.heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.heading h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 780;
+    letter-spacing: -1.1px;
+    line-height: 1.2;
+}
+
+.heading p {
+    margin: 7px 0 0;
+    color: #8a95a8;
+    font-size: 12px;
+}
+
+.heading-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.softbtn,
+.outlinebtn {
+    display: inline-flex;
+    height: 36px;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e0e5ee;
+    border-radius: 9px;
+    padding: 0 13px;
+    background: white;
+    color: #596782;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.softbtn:hover,
+.outlinebtn:hover {
+    border-color: #bbc6ea;
+    background: #fafbff;
+}
+
+.outlinebtn {
+    background: #f9faff;
+}
+

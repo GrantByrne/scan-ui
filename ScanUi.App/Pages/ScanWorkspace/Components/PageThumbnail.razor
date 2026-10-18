@@ -1,0 +1,13 @@
+<div class="pageitem @(IsSelected ? "selected" : string.Empty)" aria-current="@(IsSelected ? "page" : null)">
+    <div class="thumb">
+        <div class="thumb-inner"><div class="thumb-logo"></div><div class="thumb-title"></div><div class="thumb-line"></div><div class="thumb-line med"></div><div class="thumb-line short"></div><div class="thumb-table"><div><span></span><span></span></div><div><span></span><span></span></div><div><span></span><span></span></div></div></div>
+    </div>
+    <div class="pageitem-bottom">
+        <span class="page-number">@($"Page {PageData.Number:00}")</span>
+        <span class="page-actions">
+            <button class="tinybtn" type="button" title="Move page up" aria-label="@($"Move page {PageData.Number} up")"><FolioIcon Name="@FolioIconName.ArrowUp" /></button>
+            <button class="tinybtn" type="button" title="Remove page" aria-label="@($"Remove page {PageData.Number}")"><FolioIcon Name="@FolioIconName.Trash" /></button>
+        </span>
+    </div>
+    <div class="pageitem-sub">@PageData.Title · @PageData.Dpi DPI</div>
+</div>

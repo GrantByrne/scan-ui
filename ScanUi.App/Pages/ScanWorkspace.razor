@@ -1,0 +1,18 @@
+@page "/"
+@namespace ScanUi.App.Pages.Workspace
+
+<div class="app flex h-screen min-h-[760px] min-w-[768px] overflow-hidden">
+    <WorkspaceSidebar />
+    <div class="shell flex min-w-0 flex-1 flex-col">
+        <WorkspaceTopBar />
+        <main class="content flex min-h-0 flex-1 flex-col gap-[18px] px-[28px] pt-[26px] pb-[22px]">
+            <WorkspaceHeading />
+            <section class="workspace grid min-h-0 flex-1 grid-cols-[190px_minmax(340px,1fr)_282px] gap-[14px]" aria-label="Scanner workspace">
+                <PageListPanel Pages="@SamplePages" />
+                <DocumentPreviewPanel />
+                <ScanSettingsPanel />
+            </section>
+            <ExportBar />
+        </main>
+    </div>
+</div>
