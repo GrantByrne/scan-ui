@@ -38,7 +38,7 @@ The tests use xUnit v3 and bUnit. They cover the workspace UI and shared app com
 - `ScanUi.App.Components.Test.Unit/` — shared-component unit tests.
 - `ScanUi.slnx` — solution containing the app, shared component library, and their unit test projects.
 
-See [`contributing.md`](contributing.md) for development workflow and [`CODING_STANDARDS.md`](CODING_STANDARDS.md) for project, component, and testing conventions.
+See [`contributing.md`](docs/contributing.md) for development workflow and [`CODING_STANDARDS.md`](docs/CODING_STANDARDS.md) for project, component, and testing conventions.
 
 ## License
 
