@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug ScanUi.App",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "dotnet: build ScanUi.App",
+      "program": "${workspaceFolder}/ScanUi.App/bin/Debug/net10.0/ScanUi.App.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/ScanUi.App",
+      "stopAtEntry": false,
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

@@ -30,6 +30,10 @@ dotnet test ScanUi.slnx
 
 The tests use xUnit v3 and bUnit. They cover the workspace UI and shared app components; they do not require a scanner or external service.
 
+## VS Code
+
+Install the recommended C# and C# Dev Kit extensions, then run the `npm: install ScanUi.App dependencies` task once after checkout. VS Code tasks provide solution build, test, and app-run commands; `Ctrl+Shift+B` runs the default solution build. Select `Debug ScanUi.App` in Run and Debug and press F5 to launch the app under the debugger. C# Dev Kit also provides test discovery and debugging in the Testing view.
+
 ## Repository layout
 
 - `ScanUi.App/` — Photino host, Blazor workspace page, page-specific components, Tailwind styles, and static assets.
