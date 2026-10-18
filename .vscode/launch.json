@@ -6,9 +6,9 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "dotnet: build ScanUi.App",
-      "program": "${workspaceFolder}/ScanUi.App/bin/Debug/net10.0/ScanUi.App.dll",
+      "program": "${workspaceFolder}/src/ScanUi.App/bin/Debug/net10.0/ScanUi.App.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/ScanUi.App",
+      "cwd": "${workspaceFolder}/src/ScanUi.App",
       "stopAtEntry": false,
       "console": "integratedTerminal",
       "justMyCode": true

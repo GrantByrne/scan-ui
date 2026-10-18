@@ -3,5 +3,5 @@
 .vs/
 *.user
 **/node_modules/
-ScanUi.App/wwwroot/app.css
+src/ScanUi.App/wwwroot/app.css
 *.suo

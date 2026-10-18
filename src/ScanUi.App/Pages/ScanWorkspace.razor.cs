@@ -1,7 +1,5 @@
 namespace ScanUi.App.Pages.Workspace;
 
-public sealed record WorkspacePage(int Number, string Title, int Dpi);
-
 public partial class ScanWorkspace
 {
     private static readonly IReadOnlyList<WorkspacePage> SamplePages =

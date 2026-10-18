@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <Target Name="BuildTailwindCss" BeforeTargets="PrepareForBuild" Condition="'$(DesignTimeBuild)' != 'true'">
-    <Error Condition="!Exists('$(MSBuildProjectDirectory)/node_modules/@tailwindcss/cli')" Text="Tailwind dependencies are missing. Run 'npm ci' in ScanUi.App before building." />
+    <Error Condition="!Exists('$(MSBuildProjectDirectory)/node_modules/@tailwindcss/cli')" Text="Tailwind dependencies are missing. Run 'npm ci' in src/ScanUi.App before building." />
     <Exec Command="npm run build:css" WorkingDirectory="$(MSBuildProjectDirectory)" />
   </Target>
 </Project>

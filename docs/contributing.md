@@ -7,7 +7,7 @@ Thanks for contributing. Keep changes focused, follow the repository conventions
 From the repository root, install the frontend dependencies:
 
 ```sh
-npm ci --prefix ScanUi.App
+npm ci --prefix src/ScanUi.App
 ```
 
 Use the .NET 10 SDK and Node.js 20 or later. The app's non-design-time build runs the Tailwind CSS build automatically; no separate npm development server is configured.
@@ -25,14 +25,14 @@ Use the .NET 10 SDK and Node.js 20 or later. The app's non-design-time build run
 Run the solution build and tests from the repository root:
 
 ```sh
-dotnet build ScanUi.slnx
-dotnet test ScanUi.slnx
+dotnet build src/ScanUi.slnx
+dotnet test src/ScanUi.slnx
 ```
 
 For UI changes, also launch the desktop app and exercise the changed path:
 
 ```sh
-dotnet run --project ScanUi.App/ScanUi.App.csproj
+dotnet run --project src/ScanUi.App/ScanUi.App.csproj
 ```
 
 The current workspace is a demo backed by in-memory sample pages; it does not connect to scanner hardware. Do not rely on physical-device testing for the existing workspace behavior.

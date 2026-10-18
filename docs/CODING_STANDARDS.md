@@ -12,6 +12,7 @@ These standards apply to all hand-maintained projects in the ScanUi solution. **
 ## File and method size
 
 - A hand-maintained file in the repository MUST NOT exceed 500 lines. Split oversized files into cohesive files or responsibilities; do not evade the limit with formatting changes, partial files, or unrelated fragments. Generated, vendored, and dependency-lock files are excluded and MUST NOT be edited by hand to meet this limit.
+- A source file MUST define no more than one class or interface type. Partial declarations for that type MAY appear together in one file. A reference-type `record` declaration counts as a class type.
 - A method MUST NOT exceed 78 physical lines, counted from its declaration through its closing brace, including blank and comment lines. This also applies to constructors, lifecycle handlers, and local functions.
 - When a method approaches the limit, extract cohesive operations into clearly named methods or types. Use an established design pattern only when it fits the problem; do not split code mechanically or add abstraction without a responsibility to represent.
 

@@ -8,7 +8,7 @@
       "args": [
         "ci",
         "--prefix",
-        "${workspaceFolder}/ScanUi.App"
+        "${workspaceFolder}/src/ScanUi.App"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -21,7 +21,7 @@
       "command": "dotnet",
       "args": [
         "build",
-        "ScanUi.slnx",
+        "src/ScanUi.slnx",
         "--configuration",
         "Debug"
       ],
@@ -40,7 +40,7 @@
       "command": "dotnet",
       "args": [
         "build",
-        "ScanUi.App/ScanUi.App.csproj",
+        "src/ScanUi.App/ScanUi.App.csproj",
         "--configuration",
         "Debug"
       ],
@@ -55,7 +55,7 @@
       "command": "dotnet",
       "args": [
         "test",
-        "ScanUi.slnx",
+        "src/ScanUi.slnx",
         "--configuration",
         "Debug"
       ],
@@ -75,7 +75,7 @@
       "args": [
         "run",
         "--project",
-        "ScanUi.App/ScanUi.App.csproj",
+        "src/ScanUi.App/ScanUi.App.csproj",
         "--configuration",
         "Debug"
       ],
