@@ -14,6 +14,11 @@ public class ScanWorkspaceTests
         var rendered = context.Render<App>();
 
         Assert.Equal("Scan workspace", rendered.Find("h1").TextContent.Trim());
+        var breadcrumb = rendered.Find("nav[aria-label='Breadcrumb']");
+        Assert.Equal("Workspace", breadcrumb.QuerySelector("span")!.TextContent.Trim());
+        Assert.Equal(
+            "Scan documents",
+            breadcrumb.QuerySelector("strong[aria-current='page']")!.TextContent.Trim());
         Assert.Empty(rendered.FindAll("aside"));
         Assert.NotNull(rendered.Find("section[aria-label='Scanner workspace']"));
         Assert.NotNull(rendered.Find("section[aria-label='Export']"));

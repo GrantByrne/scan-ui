@@ -1,0 +1,18 @@
+<nav class="topbreadcrumb" aria-label="Breadcrumb">
+    @for (var index = 0; index < Items.Count; index++)
+    {
+        @if (index > 0)
+        {
+            <FolioIcon Name="@FolioIconName.ChevronRight" CssClass="small-icon" />
+        }
+
+        @if (index == Items.Count - 1)
+        {
+            <strong aria-current="page">@Items[index]</strong>
+        }
+        else
+        {
+            <span>@Items[index]</span>
+        }
+    }
+</nav>
