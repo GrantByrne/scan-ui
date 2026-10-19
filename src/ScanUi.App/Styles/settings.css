@@ -232,8 +232,7 @@
     gap: 13px;
 }
 
-.format-badge {
-    border-radius: 7px;
+.pill-format {
     padding: 7px 9px;
     background: #f3f5fa;
     color: #6d7a95;

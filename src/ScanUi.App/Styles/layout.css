@@ -103,8 +103,13 @@ input:focus-visible {
     gap: 13px;
 }
 
-.demo-pill {
+.pill {
+    display: inline-flex;
+    align-items: center;
     border-radius: 7px;
+}
+
+.pill-concept {
     padding: 7px 11px;
     background: #f2f4f8;
     color: #697694;
