@@ -109,22 +109,6 @@ input:focus-visible {
     border-radius: 7px;
 }
 
-.pill-concept {
-    padding: 7px 11px;
-    background: #f2f4f8;
-    color: #697694;
-    font-size: 10px;
-    font-weight: 790;
-    letter-spacing: .55px;
-    text-transform: uppercase;
-}
-
-.top-separator {
-    width: 1px;
-    height: 24px;
-    background: var(--line);
-}
-
 .device {
     display: flex;
     align-items: center;
