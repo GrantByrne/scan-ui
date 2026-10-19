@@ -8,13 +8,13 @@ ScanUi is a .NET 10 desktop workspace built with Blazor and Photino for document
 
 `src/ScanUi.App/Program.cs` creates the Photino host and mounts `App`; `App.razor` renders the icon sprite and routes to `ScanWorkspace`. The `/` page creates sample `WorkspacePage` records and passes them through `PageListPanel` to `PageThumbnail`. Preview, settings, and export components currently provide presentation markup. Reusable icons live in `src/ScanUi.App.Components`.
 
-`docs/CODING_STANDARDS.md` defines the intended boundary: business rules belong in `ScanUi.Core`, while external integrations belong in separate `ScanUi.Adapters.*` projects. The current `src/ScanUi.slnx` contains `src/ScanUi.App`, `src/ScanUi.App.Components`, and two unit-test projects; it does not contain those Core/adapter projects or the standards' `ScanUi.Components` project. Preserve that distinction when adding code or moving components.
+`docs/CODING_STANDARDS.md` defines the intended boundary: business rules belong in `ScanUi.Core`, while external integrations belong in separate `ScanUi.Adapters.*` projects. The current solution contains `src/ScanUi.App`, `src/ScanUi.App.Components`, and two unit-test projects; it does not contain the Core/adapter projects. Keep reusable app UI in `ScanUi.App.Components`.
 
 ## Key Directories
 
 - `src/ScanUi.App/` — Photino host, route/page UI, Tailwind source styles, and static web assets.
 - `src/ScanUi.App/Pages/ScanWorkspace/Components/` — components used only by the workspace page.
-- `src/ScanUi.App.Components/` — components shared by the app, including `SuiFolioIcon` and `SuiFolioIconSprite`.
+- `src/ScanUi.App.Components/` — shared app UI, including `SuiButton`, `SuiFolioIcon`, and the SVG sprite.
 - `src/ScanUi.App.Test.Unit/` and `src/ScanUi.App.Components.Test.Unit/` — workspace and shared-component tests.
 
 ## Development Commands

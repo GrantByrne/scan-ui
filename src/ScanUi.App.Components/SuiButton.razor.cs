@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
-namespace ScanUi.Components;
+namespace ScanUi.App.Components;
 
 public partial class SuiButton
 {

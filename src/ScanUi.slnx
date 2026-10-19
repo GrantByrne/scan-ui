@@ -1,8 +1,6 @@
 <Solution>
   <Project Path="ScanUi.App/ScanUi.App.csproj" />
   <Project Path="ScanUi.App.Components/ScanUi.App.Components.csproj" />
-  <Project Path="ScanUi.Components/ScanUi.Components.csproj" />
-  <Project Path="ScanUi.Components.Test.Unit/ScanUi.Components.Test.Unit.csproj" />
   <Project Path="ScanUi.App.Components.Test.Unit/ScanUi.App.Components.Test.Unit.csproj" />
   <Project Path="ScanUi.App.Test.Unit/ScanUi.App.Test.Unit.csproj" />
 </Solution>

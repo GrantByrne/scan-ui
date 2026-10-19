@@ -1,10 +1,10 @@
 using Bunit;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using ScanUi.Components;
+using ScanUi.App.Components;
 using Xunit;
 
-namespace ScanUi.Components.Test.Unit;
+namespace ScanUi.App.Components.Test.Unit;
 
 public class SuiButtonTests
 {

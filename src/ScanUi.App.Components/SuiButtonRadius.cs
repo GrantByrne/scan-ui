@@ -1,4 +1,4 @@
-namespace ScanUi.Components;
+namespace ScanUi.App.Components;
 
 public enum SuiButtonRadius
 {

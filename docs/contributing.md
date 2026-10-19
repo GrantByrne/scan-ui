@@ -15,7 +15,7 @@ Use the .NET 10 SDK and Node.js 20 or later. The app's non-design-time build run
 ## Make a change
 
 - Keep business rules in the core layer and presentation in UI projects. External integrations belong in separate adapter projects; do not add device or integration code to the UI.
-- Keep a page-only component beside its page in a `Components/` directory. Put app-wide components in the owning project's shared component directory; reserve generic cross-project components for the separate `ScanUi.Components` project when available.
+- Keep a page-only component beside its page in a `Components/` directory. Put reusable app-wide components in `ScanUi.App.Components`; this repository uses that shared UI library rather than a separate generic controls project.
 - Put Blazor markup in `.razor` files and C# state, lifecycle, and event logic in co-located partial `.razor.cs` files. Use constructor injection rather than `@inject` or property injection.
 - Follow [`CODING_STANDARDS.md`](CODING_STANDARDS.md) for file and method size limits, project boundaries, component design, accessibility, and test conventions.
 - Do not hand-edit generated output or dependency lock files to satisfy source-code rules.

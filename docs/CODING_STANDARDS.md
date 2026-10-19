@@ -33,7 +33,7 @@ These standards apply to all hand-maintained projects in the ScanUi solution. **
 
 - A component used by only one page MUST live in a `Components/` folder alongside that page.
 - A component shared by multiple pages but specific to its owning project MUST live in that project's shared `Components/` folder.
-- A highly generic component intended for reuse across features or projects (for example, a button, data grid, label, or form control) MUST live in the separate `ScanUi.Components` project.
+- Highly reusable UI components intended for use across the workspace's features MUST live in the existing `ScanUi.App.Components` project; keep shared UI in that library rather than creating a separate generic controls project.
 - Keep page-specific behavior with the page or feature. Shared components MUST provide presentation and interaction primitives, not duplicate business rules from `ScanUi.Core`.
 
 ## Shared component design
