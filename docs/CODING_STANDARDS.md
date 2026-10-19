@@ -40,6 +40,7 @@ These standards apply to all hand-maintained projects in the ScanUi solution. **
 
 Use [LumexUI](https://lumexui.org/) as a reference for polished, customizable, responsive Blazor components. Build components as a consistent library rather than one-off page markup:
 
+- Every Blazor component in `ScanUi.App.Components` MUST have a name prefixed with `Sui`; matching `.razor` and `.razor.cs` files MUST use that name.
 - Prefer small, composable components with clear, typed parameters and sensible defaults.
 - Expose customization through explicit parameters and composition (such as content fragments) instead of requiring consumers to copy component markup.
 - Keep variants and sizes consistent across related controls; use the project's shared styling conventions rather than per-page visual rules.

@@ -4,13 +4,13 @@ using Xunit;
 
 namespace ScanUi.App.Components.Test.Unit;
 
-public class BreadcrumbTests
+public class SuiBreadcrumbTests
 {
     [Fact]
     public void Renders_each_segment_and_marks_the_current_page()
     {
         using var context = new BunitContext();
-        var rendered = context.Render<Breadcrumb>(parameters => parameters
+        var rendered = context.Render<SuiBreadcrumb>(parameters => parameters
             .Add(component => component.Items, new[] { "Workspace", "Scans", "Scan documents" }));
 
         var breadcrumb = rendered.Find("nav[aria-label='Breadcrumb']");

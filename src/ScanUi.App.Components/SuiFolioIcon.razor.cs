@@ -26,7 +26,7 @@ public enum FolioIconName
     Info
 }
 
-public partial class FolioIcon
+public partial class SuiFolioIcon
 {
     [Parameter, EditorRequired]
     public FolioIconName Name { get; set; }

@@ -4,7 +4,7 @@ using Xunit;
 
 namespace ScanUi.App.Components.Test.Unit;
 
-public class FolioIconTests
+public class SuiFolioIconTests
 {
     [Theory]
     [InlineData(FolioIconName.Scan, "ic-scan")]
@@ -32,7 +32,7 @@ public class FolioIconTests
         string symbolId)
     {
         using var context = new BunitContext();
-        var rendered = context.Render<FolioIcon>(parameters => parameters
+        var rendered = context.Render<SuiFolioIcon>(parameters => parameters
             .Add(icon => icon.Name, name)
             .Add(icon => icon.CssClass, "small-icon"));
 
@@ -44,7 +44,7 @@ public class FolioIconTests
     public void Sprite_contains_each_referenced_symbol_once()
     {
         using var context = new BunitContext();
-        var rendered = context.Render<FolioIconSprite>();
+        var rendered = context.Render<SuiFolioIconSprite>();
         var symbolIds = rendered.FindAll("symbol").Select(symbol => symbol.GetAttribute("id"));
 
         Assert.Equal(

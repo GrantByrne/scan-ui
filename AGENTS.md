@@ -14,7 +14,7 @@ ScanUi is a .NET 10 desktop workspace built with Blazor and Photino for document
 
 - `src/ScanUi.App/` — Photino host, route/page UI, Tailwind source styles, and static web assets.
 - `src/ScanUi.App/Pages/ScanWorkspace/Components/` — components used only by the workspace page.
-- `src/ScanUi.App.Components/` — components shared by the app, including `FolioIcon` and its SVG sprite.
+- `src/ScanUi.App.Components/` — components shared by the app, including `SuiFolioIcon` and `SuiFolioIconSprite`.
 - `src/ScanUi.App.Test.Unit/` and `src/ScanUi.App.Components.Test.Unit/` — workspace and shared-component tests.
 
 ## Development Commands
