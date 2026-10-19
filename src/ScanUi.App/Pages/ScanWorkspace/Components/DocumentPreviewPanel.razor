@@ -2,11 +2,21 @@
     <div class="preview-top">
         <div class="preview-label">Document preview <small>Page 1 of 3</small></div>
         <div class="tools">
-            <button class="tool" type="button" title="Auto enhance"><SuiFolioIcon Name="@FolioIconName.Spark" /><span>Enhance</span></button>
-            <button class="tool" type="button" title="Auto crop"><SuiFolioIcon Name="@FolioIconName.Crop" /><span>Crop</span></button>
+            <SuiButton Class="tool" Variant="@SuiButtonVariant.Ghost" Color="@SuiButtonColor.Default" title="Auto enhance">
+                <StartContent><SuiFolioIcon Name="@FolioIconName.Spark" /></StartContent>
+                <ChildContent><span>Enhance</span></ChildContent>
+            </SuiButton>
+            <SuiButton Class="tool" Variant="@SuiButtonVariant.Ghost" Color="@SuiButtonColor.Default" title="Auto crop">
+                <StartContent><SuiFolioIcon Name="@FolioIconName.Crop" /></StartContent>
+                <ChildContent><span>Crop</span></ChildContent>
+            </SuiButton>
             <span class="toolbar-split"></span>
-            <button class="tool" type="button" title="Rotate 90 degrees" aria-label="Rotate 90 degrees"><SuiFolioIcon Name="@FolioIconName.Rotate" /></button>
-            <button class="tool active" type="button" title="Toggle searchable text" aria-label="Toggle searchable text"><SuiFolioIcon Name="@FolioIconName.Text" /></button>
+            <SuiButton Class="tool" Variant="@SuiButtonVariant.Ghost" Color="@SuiButtonColor.Default" IconOnly="true" title="Rotate 90 degrees" aria-label="Rotate 90 degrees">
+                <ChildContent><SuiFolioIcon Name="@FolioIconName.Rotate" /></ChildContent>
+            </SuiButton>
+            <SuiButton Class="tool active" Variant="@SuiButtonVariant.Ghost" Color="@SuiButtonColor.Default" IconOnly="true" title="Toggle searchable text" aria-label="Toggle searchable text">
+                <ChildContent><SuiFolioIcon Name="@FolioIconName.Text" /></ChildContent>
+            </SuiButton>
         </div>
     </div>
     <div class="stage">
@@ -20,10 +30,16 @@
     <div class="preview-bottom">
         <div class="preview-info"><SuiFolioIcon Name="@FolioIconName.Check" /><span>Auto-straightened · 300 DPI</span></div>
         <div class="zoomtools">
-            <button type="button" title="Zoom out" aria-label="Zoom out"><SuiFolioIcon Name="@FolioIconName.Minus" CssClass="small-icon" /></button>
+            <SuiButton Variant="@SuiButtonVariant.Light" Color="@SuiButtonColor.Default" IconOnly="true" title="Zoom out" aria-label="Zoom out">
+                <ChildContent><SuiFolioIcon Name="@FolioIconName.Minus" CssClass="small-icon" /></ChildContent>
+            </SuiButton>
             <span>100%</span>
-            <button type="button" title="Zoom in" aria-label="Zoom in"><SuiFolioIcon Name="@FolioIconName.Plus" CssClass="small-icon" /></button>
-            <button type="button" title="Reset zoom" aria-label="Reset zoom"><SuiFolioIcon Name="@FolioIconName.Max" CssClass="small-icon" /></button>
+            <SuiButton Variant="@SuiButtonVariant.Light" Color="@SuiButtonColor.Default" IconOnly="true" title="Zoom in" aria-label="Zoom in">
+                <ChildContent><SuiFolioIcon Name="@FolioIconName.Plus" CssClass="small-icon" /></ChildContent>
+            </SuiButton>
+            <SuiButton Variant="@SuiButtonVariant.Light" Color="@SuiButtonColor.Default" IconOnly="true" title="Reset zoom" aria-label="Reset zoom">
+                <ChildContent><SuiFolioIcon Name="@FolioIconName.Max" CssClass="small-icon" /></ChildContent>
+            </SuiButton>
         </div>
     </div>
 </div>

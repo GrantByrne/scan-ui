@@ -1,0 +1,4 @@
+@using Microsoft.AspNetCore.Components.Web
+@namespace ScanUi.Components
+
+<button @attributes="AdditionalAttributes" type="@HtmlType" disabled="@Disabled" class="@ButtonClass" style="@Style" @onclick="HandleClickAsync">@StartContent@ChildContent@EndContent</button>

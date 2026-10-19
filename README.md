@@ -28,7 +28,7 @@ Run the unit test projects from the repository root:
 dotnet test src/ScanUi.slnx
 ```
 
-The tests use xUnit v3 and bUnit. They cover the workspace UI and shared app components; they do not require a scanner or external service.
+The tests use xUnit v3 and bUnit. They cover the workspace UI, app-specific shared components, and generic controls; they do not require a scanner or external service.
 
 ## VS Code
 
@@ -38,9 +38,11 @@ Install the recommended C# and C# Dev Kit extensions, then run the `npm: install
 
 - `src/ScanUi.App/` — Photino host, Blazor workspace page, page-specific components, Tailwind styles, and static assets.
 - `src/ScanUi.App.Components/` — components shared by the app, including the icon component and SVG sprite.
+- `src/ScanUi.Components/` — generic reusable UI controls, currently `SuiButton`.
 - `src/ScanUi.App.Test.Unit/` — workspace unit tests.
-- `src/ScanUi.App.Components.Test.Unit/` — shared-component unit tests.
-- `src/ScanUi.slnx` — solution containing the app, shared component library, and their unit test projects.
+- `src/ScanUi.App.Components.Test.Unit/` — shared app-component unit tests.
+- `src/ScanUi.Components.Test.Unit/` — generic component unit tests.
+- `src/ScanUi.slnx` — solution containing the app, both component libraries, and their unit test projects.
 
 See [`contributing.md`](docs/contributing.md) for development workflow and [`CODING_STANDARDS.md`](docs/CODING_STANDARDS.md) for project, component, and testing conventions.
 

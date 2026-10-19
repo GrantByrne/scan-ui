@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../ScanUi.App.Components/ScanUi.App.Components.csproj" />
+    <ProjectReference Include="../ScanUi.Components/ScanUi.Components.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="wwwroot\**">

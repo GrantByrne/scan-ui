@@ -55,4 +55,74 @@ public class ScanWorkspaceTests
         Assert.All(iconOnlyButtons, button =>
             Assert.False(string.IsNullOrWhiteSpace(button.GetAttribute("aria-label"))));
     }
+
+    [Fact]
+    public void Migrated_buttons_preserve_labels_accessible_names_and_visual_hooks()
+    {
+        using var context = new BunitContext();
+        var rendered = context.Render<App>();
+
+        Assert.Equal(16, rendered.FindAll("button.sui-button").Count);
+
+        void AssertButton(
+            string selector,
+            string visibleText,
+            string? title,
+            string? accessibleName,
+            params string[] expectedClasses)
+        {
+            var button = rendered.Find(selector);
+            Assert.Equal(visibleText, button.TextContent.Trim());
+            Assert.Equal(title, button.GetAttribute("title"));
+            Assert.Equal(accessibleName, button.GetAttribute("aria-label"));
+
+            var classes = button.GetAttribute("class")!.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            Assert.Contains("sui-button", classes);
+            foreach (var expectedClass in expectedClasses)
+            {
+                Assert.Contains(expectedClass, classes);
+            }
+        }
+
+        AssertButton("button.tool[title='Auto enhance']", "Enhance", "Auto enhance", null,
+            "tool", "sui-button-variant-ghost", "sui-button-color-default");
+        AssertButton("button.tool[title='Auto crop']", "Crop", "Auto crop", null,
+            "tool", "sui-button-variant-ghost", "sui-button-color-default");
+        AssertButton("button.tool[title='Rotate 90 degrees']", "", "Rotate 90 degrees", "Rotate 90 degrees",
+            "tool", "sui-button-variant-ghost", "sui-button-color-default", "sui-button-icon-only");
+        AssertButton("button.tool.active[title='Toggle searchable text']", "", "Toggle searchable text",
+            "Toggle searchable text", "tool", "active", "sui-button-variant-ghost",
+            "sui-button-color-default", "sui-button-icon-only");
+
+        AssertButton(".zoomtools button[title='Zoom out']", "", "Zoom out", "Zoom out",
+            "sui-button-variant-light", "sui-button-color-default", "sui-button-icon-only");
+        AssertButton(".zoomtools button[title='Zoom in']", "", "Zoom in", "Zoom in",
+            "sui-button-variant-light", "sui-button-color-default", "sui-button-icon-only");
+        AssertButton(".zoomtools button[title='Reset zoom']", "", "Reset zoom", "Reset zoom",
+            "sui-button-variant-light", "sui-button-color-default", "sui-button-icon-only");
+        AssertButton("button.addpage", "Add another page", null, null,
+            "addpage", "sui-button-variant-outlined", "sui-button-color-default", "sui-button-full-width");
+
+        for (var pageNumber = 1; pageNumber <= 3; pageNumber++)
+        {
+            AssertButton(
+                $"button.tinybtn[aria-label='Move page {pageNumber} up']",
+                "",
+                "Move page up",
+                $"Move page {pageNumber} up",
+                "tinybtn", "sui-button-variant-ghost", "sui-button-color-default", "sui-button-icon-only");
+            AssertButton(
+                $"button.tinybtn[aria-label='Remove page {pageNumber}']",
+                "",
+                "Remove page",
+                $"Remove page {pageNumber}",
+                "tinybtn", "sui-button-variant-ghost", "sui-button-color-default", "sui-button-icon-only");
+        }
+
+        AssertButton("button.scanprimary", "Scan pages", null, null,
+            "primary", "scanprimary", "sui-button-variant-solid", "sui-button-color-primary",
+            "sui-button-full-width");
+        AssertButton("button.exportprimary", "Export document", null, null,
+            "primary", "exportprimary", "sui-button-variant-solid", "sui-button-color-primary");
+    }
 }

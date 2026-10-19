@@ -1,0 +1,128 @@
+.sui-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sui-button:where(.sui-button-variant-solid.sui-button-color-primary) {
+    border: 0;
+    background: var(--blue);
+    color: white;
+    box-shadow: 0 5px 12px #4d62dd25;
+}
+
+.sui-button:where(.sui-button-variant-solid.sui-button-color-primary):hover {
+    background: #4056d1;
+}
+
+.sui-button:where(.sui-button-variant-solid.sui-button-color-default) {
+    border: 0;
+    background: var(--background);
+    color: var(--ink);
+}
+
+.sui-button:where(.sui-button-variant-outlined.sui-button-color-default) {
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+}
+
+.sui-button:where(.sui-button-variant-outlined.sui-button-color-primary) {
+    border: 1px solid var(--blue);
+    background: transparent;
+    color: var(--blue);
+}
+
+.sui-button:where(.sui-button-variant-ghost.sui-button-color-default) {
+    border: 0;
+    background: transparent;
+    color: #72809a;
+}
+
+.sui-button:where(.sui-button-variant-ghost.sui-button-color-default):hover {
+    background: #f0f3fd;
+    color: var(--blue);
+}
+
+.sui-button:where(.sui-button-variant-ghost.sui-button-color-primary) {
+    border: 0;
+    background: transparent;
+    color: var(--blue);
+}
+
+.sui-button:where(.sui-button-variant-ghost.sui-button-color-primary):hover {
+    background: #eff1ff;
+}
+
+.sui-button-size-small {
+    min-width: 4rem;
+    height: 2rem;
+    padding-inline: .75rem;
+    gap: .5rem;
+    font-size: 11px;
+}
+
+.sui-button-size-medium {
+    min-width: 5rem;
+    height: 2.5rem;
+    padding-inline: 1rem;
+    gap: .5rem;
+    font-size: 12px;
+}
+
+.sui-button-size-large {
+    min-width: 6rem;
+    height: 3rem;
+    padding-inline: 1.5rem;
+    gap: .5rem;
+    font-size: 14px;
+}
+
+.sui-button-radius-none {
+    border-radius: 0;
+}
+
+.sui-button-radius-small {
+    border-radius: 5px;
+}
+
+.sui-button-radius-medium {
+    border-radius: 7px;
+}
+
+.sui-button-radius-large {
+    border-radius: 9px;
+}
+
+.sui-button-radius-full {
+    border-radius: 9999px;
+}
+
+.sui-button-full-width {
+    width: 100%;
+}
+
+.sui-button-icon-only {
+    gap: 0;
+}
+
+.sui-button-icon-only.sui-button-size-small {
+    box-sizing: border-box;
+    width: 2rem;
+    min-width: 2rem;
+    padding-inline: 0;
+}
+
+.sui-button-icon-only.sui-button-size-medium {
+    box-sizing: border-box;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    padding-inline: 0;
+}
+
+.sui-button-icon-only.sui-button-size-large {
+    box-sizing: border-box;
+    width: 3rem;
+    min-width: 3rem;
+    padding-inline: 0;
+}

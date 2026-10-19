@@ -5,8 +5,12 @@
     <div class="pageitem-bottom">
         <span class="page-number">@($"Page {PageData.Number:00}")</span>
         <span class="page-actions">
-            <button class="tinybtn" type="button" title="Move page up" aria-label="@($"Move page {PageData.Number} up")"><SuiFolioIcon Name="@FolioIconName.ArrowUp" /></button>
-            <button class="tinybtn" type="button" title="Remove page" aria-label="@($"Remove page {PageData.Number}")"><SuiFolioIcon Name="@FolioIconName.Trash" /></button>
+            <SuiButton Class="tinybtn" Variant="@SuiButtonVariant.Ghost" Color="@SuiButtonColor.Default" IconOnly="true" title="Move page up" aria-label="@($"Move page {PageData.Number} up")">
+                <ChildContent><SuiFolioIcon Name="@FolioIconName.ArrowUp" /></ChildContent>
+            </SuiButton>
+            <SuiButton Class="tinybtn" Variant="@SuiButtonVariant.Ghost" Color="@SuiButtonColor.Default" IconOnly="true" title="Remove page" aria-label="@($"Remove page {PageData.Number}")">
+                <ChildContent><SuiFolioIcon Name="@FolioIconName.Trash" /></ChildContent>
+            </SuiButton>
         </span>
     </div>
     <div class="pageitem-sub">@PageData.Title · @PageData.Dpi DPI</div>

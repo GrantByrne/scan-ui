@@ -6,5 +6,5 @@
             <PageThumbnail PageData="@(page)" IsSelected="@(page.Number == 1)" />
         }
     </div>
-    <div class="pages-footer"><button class="addpage" type="button"><SuiFolioIcon Name="@FolioIconName.Plus" CssClass="small-icon" />Add another page</button></div>
+    <div class="pages-footer"><SuiButton Class="addpage" Variant="@SuiButtonVariant.Outlined" Color="@SuiButtonColor.Default" FullWidth="true"><StartContent><SuiFolioIcon Name="@FolioIconName.Plus" CssClass="small-icon" /></StartContent><ChildContent>Add another page</ChildContent></SuiButton></div>
 </div>
