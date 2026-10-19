@@ -1,0 +1,8 @@
+@using Microsoft.AspNetCore.Components.Web
+<button @attributes="AdditionalAttributes"
+        type="button"
+        class="@ToggleClass"
+        aria-pressed="@(Value ? "true" : "false")"
+        aria-label="@Label"
+        disabled="@Disabled"
+        @onclick="ToggleAsync"></button>

@@ -1,0 +1,8 @@
+<div class="@FormClass">
+    <label class="sui-forms-label" for="@For">@Label</label>
+    @ChildContent
+    @if (!string.IsNullOrWhiteSpace(HelpText))
+    {
+        <div id="@HelpTextId" class="sui-forms-help">@HelpText</div>
+    }
+</div>

@@ -37,7 +37,7 @@ Install the recommended C# and C# Dev Kit extensions, then run the `npm: install
 ## Repository layout
 
 - `src/ScanUi.App/` — Photino host, Blazor workspace page, page-specific components, Tailwind styles, and static assets.
-- `src/ScanUi.App.Components/` — shared app components, including `SuiButton`, the icon component, and SVG sprite.
+- `src/ScanUi.App.Components/` — shared app components, including the `SuiForms`, `SuiDropdown`, and `SuiToggle` form controls, `SuiButton`, the icon component, and SVG sprite.
 - `src/ScanUi.App.Test.Unit/` — workspace unit tests.
 - `src/ScanUi.App.Components.Test.Unit/` — shared component unit tests.
 - `src/ScanUi.slnx` — solution containing the app, shared component library, and two unit-test projects.

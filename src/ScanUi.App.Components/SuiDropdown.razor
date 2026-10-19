@@ -1,0 +1,14 @@
+@using Microsoft.AspNetCore.Components.Web
+<div class="sui-dropdown">
+    <select @attributes="AdditionalAttributes"
+            id="@Id"
+            class="@DropdownClass"
+            disabled="@Disabled"
+            @onchange="HandleChangeAsync">
+        @foreach (var option in Options)
+        {
+            <option value="@option.Value" selected="@(option.Value == Value)">@option.Label</option>
+        }
+    </select>
+    <SuiFolioIcon Name="@FolioIconName.Chevron" CssClass="sui-dropdown-icon" />
+</div>

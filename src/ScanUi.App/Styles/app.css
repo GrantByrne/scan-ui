@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./layout.css";
 @import "./buttons.css";
+@import "./forms.css";
 @import "./workspace.css";
 @import "./document.css";
 @import "./settings.css";

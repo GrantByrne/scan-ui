@@ -1,0 +1,93 @@
+.sui-forms {
+    display: block;
+}
+
+.sui-forms-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #54627b;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sui-forms-help {
+    margin-top: 7px;
+    color: #9ca7b9;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.sui-dropdown {
+    position: relative;
+}
+
+.sui-dropdown-select {
+    width: 100%;
+    height: 37px;
+    appearance: none;
+    border: 1px solid #e1e6ef;
+    border-radius: 8px;
+    padding: 0 35px 0 11px;
+    background: white;
+    color: #36455f;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 620;
+}
+
+.sui-dropdown-select:focus-visible,
+.sui-toggle:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.sui-dropdown-select:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+}
+
+.sui-dropdown-icon {
+    position: absolute;
+    top: 10px;
+    right: 11px;
+    width: 16px;
+    height: 16px;
+    color: #8b96aa;
+    pointer-events: none;
+}
+
+.sui-toggle {
+    position: relative;
+    width: 38px;
+    height: 22px;
+    flex: none;
+    border: 0;
+    border-radius: 20px;
+    background: #d5dbe5;
+    cursor: pointer;
+}
+
+.sui-toggle::after {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 3px #0002;
+    content: "";
+}
+
+.sui-toggle[aria-pressed="true"] {
+    background: var(--blue);
+}
+
+.sui-toggle[aria-pressed="true"]::after {
+    transform: translateX(16px);
+}
+
+.sui-toggle:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+}

@@ -57,6 +57,21 @@ public class ScanWorkspaceTests
     }
 
     [Fact]
+    public void Scan_settings_controls_update_their_bound_values()
+    {
+        using var context = new BunitContext();
+        var rendered = context.Render<App>();
+
+        rendered.Find("select#source").Change("Flatbed");
+        Assert.Equal("Flatbed", ((IHtmlSelectElement)rendered.Find("select#source")).Value);
+
+        rendered.Find("button[aria-label='Double-sided scanning']").Click();
+        Assert.Equal(
+            "false",
+            rendered.Find("button[aria-label='Double-sided scanning']").GetAttribute("aria-pressed"));
+    }
+
+    [Fact]
     public void Migrated_buttons_preserve_labels_accessible_names_and_visual_hooks()
     {
         using var context = new BunitContext();
