@@ -6,6 +6,6 @@ public partial class ScanWorkspace
     [
         new(1, "Invoice", 300),
         new(2, "Agreement", 300),
-        new(3, "Visit notes", 300)
+        new(3, "Visit notes", 300),
     ];
 }

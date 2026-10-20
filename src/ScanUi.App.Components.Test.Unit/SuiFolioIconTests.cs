@@ -29,15 +29,17 @@ public class SuiFolioIconTests
     [InlineData(FolioIconName.Info, "ic-info")]
     public void Renders_the_symbol_with_composed_class_and_decorative_accessibility(
         FolioIconName name,
-        string symbolId)
+        string symbolId
+    )
     {
         using var context = new BunitContext();
-        var rendered = context.Render<SuiFolioIcon>(parameters => parameters
-            .Add(icon => icon.Name, name)
-            .Add(icon => icon.CssClass, "small-icon"));
+        var rendered = context.Render<SuiFolioIcon>(parameters =>
+            parameters.Add(icon => icon.Name, name).Add(icon => icon.CssClass, "small-icon")
+        );
 
         rendered.MarkupMatches(
-            $"<svg class=\"icon small-icon\" aria-hidden=\"true\"><use href=\"#{symbolId}\"></use></svg>");
+            $"<svg class=\"icon small-icon\" aria-hidden=\"true\"><use href=\"#{symbolId}\"></use></svg>"
+        );
     }
 
     [Fact]
@@ -50,11 +52,28 @@ public class SuiFolioIconTests
         Assert.Equal(
             new[]
             {
-                "ic-scan", "ic-grid", "ic-file", "ic-clock", "ic-settings", "ic-plus",
-                "ic-chevron", "ic-chevron-right", "ic-rotate", "ic-spark", "ic-crop",
-                "ic-text", "ic-trash", "ic-arrow-up", "ic-download", "ic-import",
-                "ic-minus", "ic-max", "ic-check", "ic-info"
+                "ic-scan",
+                "ic-grid",
+                "ic-file",
+                "ic-clock",
+                "ic-settings",
+                "ic-plus",
+                "ic-chevron",
+                "ic-chevron-right",
+                "ic-rotate",
+                "ic-spark",
+                "ic-crop",
+                "ic-text",
+                "ic-trash",
+                "ic-arrow-up",
+                "ic-download",
+                "ic-import",
+                "ic-minus",
+                "ic-max",
+                "ic-check",
+                "ic-info",
             },
-            symbolIds);
+            symbolIds
+        );
     }
 }

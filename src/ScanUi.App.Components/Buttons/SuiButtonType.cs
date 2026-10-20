@@ -4,5 +4,5 @@ public enum SuiButtonType
 {
     Button,
     Submit,
-    Reset
+    Reset,
 }

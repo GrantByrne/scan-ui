@@ -2,6 +2,12 @@
 
 ScanUi is a .NET 10 desktop document workspace built with Blazor and Photino. The current `/` screen is a presentation demo: it shows a page list, document preview, scanner settings, and export controls using in-memory sample pages. It does not connect to scanner hardware.
 
+## Screenshot
+
+![ScanUi document workspace](docs/images/scan-ui.png)
+
+To refresh the screenshot on Linux, run `./scripts/capture-readme-screenshot.sh` in a graphical session with KDE Spectacle and `qdbus6` installed. The script builds the app, focuses and captures its window, then closes it. Install the Tailwind dependencies with `npm ci --prefix src/ScanUi.App` before the first capture.
+
 ## Requirements
 
 - .NET 10 SDK
@@ -37,7 +43,7 @@ Install the recommended C# and C# Dev Kit extensions, then run the `npm: install
 ## Repository layout
 
 - `src/ScanUi.App/` — Photino host, Blazor workspace page, page-specific components, Tailwind styles, and static assets.
-- `src/ScanUi.App.Components/` — shared app components, including the `SuiForms`, `SuiDropdown`, and `SuiToggle` form controls, `SuiButton`, the icon component, and SVG sprite.
+- `src/ScanUi.App.Components/` — shared app components, with form controls grouped under `Forms/`, buttons under `Buttons/`, plus icons and other shared UI.
 - `src/ScanUi.App.Test.Unit/` — workspace unit tests.
 - `src/ScanUi.App.Components.Test.Unit/` — shared component unit tests.
 - `src/ScanUi.slnx` — solution containing the app, shared component library, and two unit-test projects.

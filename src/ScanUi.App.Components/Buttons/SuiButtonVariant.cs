@@ -5,5 +5,5 @@ public enum SuiButtonVariant
     Solid,
     Outlined,
     Ghost,
-    Light
+    Light,
 }

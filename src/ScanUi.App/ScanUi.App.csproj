@@ -10,7 +10,6 @@
     <PackageReference Include="PhotinoX.Blazor" Version="5.3.5" />
   </ItemGroup>
 
-
   <ItemGroup>
     <ProjectReference Include="../ScanUi.App.Components/ScanUi.App.Components.csproj" />
   </ItemGroup>
@@ -27,8 +26,15 @@
     </Content>
   </ItemGroup>
 
-  <Target Name="BuildTailwindCss" BeforeTargets="PrepareForBuild" Condition="'$(DesignTimeBuild)' != 'true'">
-    <Error Condition="!Exists('$(MSBuildProjectDirectory)/node_modules/@tailwindcss/cli')" Text="Tailwind dependencies are missing. Run 'npm ci' in src/ScanUi.App before building." />
+  <Target
+    Name="BuildTailwindCss"
+    BeforeTargets="PrepareForBuild"
+    Condition="'$(DesignTimeBuild)' != 'true'"
+  >
+    <Error
+      Condition="!Exists('$(MSBuildProjectDirectory)/node_modules/@tailwindcss/cli')"
+      Text="Tailwind dependencies are missing. Run 'npm ci' in src/ScanUi.App before building."
+    />
     <Exec Command="npm run build:css" WorkingDirectory="$(MSBuildProjectDirectory)" />
   </Target>
 </Project>

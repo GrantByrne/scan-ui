@@ -4,5 +4,5 @@ public enum SuiButtonSize
 {
     Small,
     Medium,
-    Large
+    Large,
 }

@@ -21,6 +21,7 @@ These standards apply to all hand-maintained projects in the ScanUi solution. **
 - Business logic in `ScanUi.Core` MUST be covered by unit tests.
 - Test project names MUST use one of these forms: `{ProjectName}.Test.Unit` or `{ProjectName}.Tests.Integration`. For example: `ScanUi.Core.Test.Unit` and `ScanUi.Adapters.Scanner.Tests.Integration`.
 - Tests MUST use xUnit v3. Test doubles (fakes and mocks) MUST use FakeItEasy. Blazor component tests MUST use Bunit.
+- The directory structure inside each test project MUST mirror the source-folder structure of the project it tests: place each test file under the same relative folder path as the production source file it tests; tests for source files at the project root MUST remain at the test-project root.
 - Tests SHOULD be succinct and follow Arrange, Act, Assert: establish inputs and dependencies, perform the behavior once, then assert its observable result. Do NOT add `// Arrange`, `// Act`, or `// Assert` comments.
 - Unit tests MUST exercise business behavior without relying on external services or devices. Test adapter boundary behavior in the adapter's test project.
 

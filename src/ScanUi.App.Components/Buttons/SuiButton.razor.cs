@@ -5,20 +5,48 @@ namespace ScanUi.App.Components;
 
 public partial class SuiButton
 {
-    [Parameter] public RenderFragment? ChildContent { get; set; }
-    [Parameter] public RenderFragment? StartContent { get; set; }
-    [Parameter] public RenderFragment? EndContent { get; set; }
-    [Parameter] public SuiButtonType Type { get; set; } = SuiButtonType.Button;
-    [Parameter] public SuiButtonVariant? Variant { get; set; }
-    [Parameter] public SuiButtonColor? Color { get; set; }
-    [Parameter] public SuiButtonSize? Size { get; set; }
-    [Parameter] public SuiButtonRadius? Radius { get; set; }
-    [Parameter] public bool Disabled { get; set; } = false;
-    [Parameter] public bool FullWidth { get; set; } = false;
-    [Parameter] public bool IconOnly { get; set; } = false;
-    [Parameter] public EventCallback<MouseEventArgs> OnClick { get; set; }
-    [Parameter] public string? Class { get; set; }
-    [Parameter] public string? Style { get; set; }
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public RenderFragment? StartContent { get; set; }
+
+    [Parameter]
+    public RenderFragment? EndContent { get; set; }
+
+    [Parameter]
+    public SuiButtonType Type { get; set; } = SuiButtonType.Button;
+
+    [Parameter]
+    public SuiButtonVariant? Variant { get; set; }
+
+    [Parameter]
+    public SuiButtonColor? Color { get; set; }
+
+    [Parameter]
+    public SuiButtonSize? Size { get; set; }
+
+    [Parameter]
+    public SuiButtonRadius? Radius { get; set; }
+
+    [Parameter]
+    public bool Disabled { get; set; } = false;
+
+    [Parameter]
+    public bool FullWidth { get; set; } = false;
+
+    [Parameter]
+    public bool IconOnly { get; set; } = false;
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClick { get; set; }
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    [Parameter]
+    public string? Style { get; set; }
+
     [Parameter(CaptureUnmatchedValues = true)]
     public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
 

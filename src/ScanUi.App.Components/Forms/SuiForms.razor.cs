@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 
-namespace ScanUi.App.Components;
+namespace ScanUi.App.Components.Forms;
 
 public partial class SuiForms
 {
@@ -19,7 +19,8 @@ public partial class SuiForms
     [Parameter]
     public string? CssClass { get; set; }
 
-    private string FormClass => string.IsNullOrWhiteSpace(CssClass) ? "sui-forms" : $"sui-forms {CssClass}";
+    private string FormClass =>
+        string.IsNullOrWhiteSpace(CssClass) ? "sui-forms" : $"sui-forms {CssClass}";
 
     private string HelpTextId => $"{For}-help";
 }

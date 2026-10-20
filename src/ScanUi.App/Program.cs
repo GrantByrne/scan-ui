@@ -10,9 +10,7 @@ internal static class Program
         builder.RootComponents.Add<App>("#app");
         builder.ConfigureMainWindow(window =>
         {
-            window
-                .SetTitle("Folio — Document Studio")
-                .SetSize(1200, 800);
+            window.SetTitle("Folio — Document Studio").SetSize(1200, 800);
         });
 
         await using var app = builder.Build();

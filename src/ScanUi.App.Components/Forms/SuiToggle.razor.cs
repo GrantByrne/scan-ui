@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 
-namespace ScanUi.App.Components;
+namespace ScanUi.App.Components.Forms;
 
 public partial class SuiToggle
 {
@@ -22,7 +22,8 @@ public partial class SuiToggle
     [Parameter(CaptureUnmatchedValues = true)]
     public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
 
-    private string ToggleClass => string.IsNullOrWhiteSpace(CssClass) ? "sui-toggle" : $"sui-toggle {CssClass}";
+    private string ToggleClass =>
+        string.IsNullOrWhiteSpace(CssClass) ? "sui-toggle" : $"sui-toggle {CssClass}";
 
     private Task ToggleAsync() => Disabled ? Task.CompletedTask : ValueChanged.InvokeAsync(!Value);
 }

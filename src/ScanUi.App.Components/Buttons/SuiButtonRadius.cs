@@ -6,5 +6,5 @@ public enum SuiButtonRadius
     Small,
     Medium,
     Large,
-    Full
+    Full,
 }

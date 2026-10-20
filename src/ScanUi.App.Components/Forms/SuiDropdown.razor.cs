@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 
-namespace ScanUi.App.Components;
+namespace ScanUi.App.Components.Forms;
 
 public partial class SuiDropdown
 {
@@ -25,7 +25,10 @@ public partial class SuiDropdown
     [Parameter(CaptureUnmatchedValues = true)]
     public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
 
-    private string DropdownClass => string.IsNullOrWhiteSpace(CssClass) ? "sui-dropdown-select" : $"sui-dropdown-select {CssClass}";
+    private string DropdownClass =>
+        string.IsNullOrWhiteSpace(CssClass)
+            ? "sui-dropdown-select"
+            : $"sui-dropdown-select {CssClass}";
 
     private Task HandleChangeAsync(ChangeEventArgs args) =>
         ValueChanged.InvokeAsync(args.Value?.ToString() ?? string.Empty);

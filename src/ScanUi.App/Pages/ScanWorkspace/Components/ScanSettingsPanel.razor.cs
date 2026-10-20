@@ -1,4 +1,4 @@
-using ScanUi.App.Components;
+using ScanUi.App.Components.Forms;
 
 namespace ScanUi.App.Pages.ScanWorkspace.Components;
 
@@ -7,28 +7,28 @@ public partial class ScanSettingsPanel
     private static readonly IReadOnlyList<SuiDropdownOption> ScannerOptions =
     [
         new("Brother DS-740D", "Brother DS-740D"),
-        new("Choose a scanner…", "Choose a scanner…")
+        new("Choose a scanner…", "Choose a scanner…"),
     ];
 
     private static readonly IReadOnlyList<SuiDropdownOption> SourceOptions =
     [
         new("Document feeder", "Document feeder"),
         new("Manual single sheet", "Manual single sheet"),
-        new("Flatbed", "Flatbed")
+        new("Flatbed", "Flatbed"),
     ];
 
     private static readonly IReadOnlyList<SuiDropdownOption> ColorOptions =
     [
         new("Color", "Color"),
         new("Grayscale", "Grayscale"),
-        new("Black & white", "Black & white")
+        new("Black & white", "Black & white"),
     ];
 
     private static readonly IReadOnlyList<SuiDropdownOption> ResolutionOptions =
     [
         new("300 DPI", "300 DPI"),
         new("150 DPI", "150 DPI"),
-        new("600 DPI", "600 DPI")
+        new("600 DPI", "600 DPI"),
     ];
 
     private static readonly IReadOnlyList<SuiDropdownOption> PaperSizeOptions =
@@ -37,7 +37,7 @@ public partial class ScanSettingsPanel
         new("US Letter", "US Letter"),
         new("A4", "A4"),
         new("Legal", "Legal"),
-        new("Receipt", "Receipt")
+        new("Receipt", "Receipt"),
     ];
 
     private string _selectedScanner = "Brother DS-740D";
